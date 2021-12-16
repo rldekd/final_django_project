@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %} Confirm Delete {% endblock %}
+
+{% block content %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="alert alert-danger">사이트를 지우겠습니까? 해당 실행은 복구할 수 없습니다. "{{object}}"?</div>
+    <input type="submit" value="Delete" class="btn btn-danger">
+</form>
+{% endblock %}
